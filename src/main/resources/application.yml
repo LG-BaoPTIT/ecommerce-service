@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: ecommerce-service
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+#  data:
+#    mongodb:
+#      host: localhost
+#      port: 27017
+#      database: db_adminservice
+  data:
+    mongodb:
+      database: db_ecomservice
+      uri: mongodb+srv://trivm30092001:y2056XEHlqmKTpiP@cluster0.ipdtu5z.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+  redis:
+    host: localhost
+    port: 6379
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: core
+  main:
+    allow-circular-references: true
+api:
+  key: ITE-INTERN
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+
+payment:
+  accessCode: EXBNKNLPPH
+  hashSecret: e9240d54a011f5cf6564d668baf5e9bc
+  merchantId: 102597
+  cancelUrl: http://localhost:4028/payment-result
+  ipnUrl: https://fd6a-1-55-254-159.ngrok-free.app/ecommerce/payment/handleResult
+  returnUrl: http://localhost:4028/payment-result
+  urlPayment: https://dev-api.payday.vn/merchants/create-order
+  urlTransactionDetail: https://dev-api.payday.vn/merchants/transaction-detail
+
+
+
+server:
+  port: 8099
+
