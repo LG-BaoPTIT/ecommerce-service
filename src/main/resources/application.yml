@@ -13,10 +13,10 @@ spring:
       database: db_ecomservice
       uri: mongodb+srv://trivm30092001:y2056XEHlqmKTpiP@cluster0.ipdtu5z.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
   redis:
-    host: localhost
+    host: 172.19.0.4
     port: 6379
   rabbitmq:
-    host: localhost
+    host: 172.19.0.3
     port: 5672
     username: guest
     password: guest
